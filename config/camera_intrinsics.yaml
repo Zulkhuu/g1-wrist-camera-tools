@@ -1,0 +1,8 @@
+# Visualization defaults, NOT factory calibration. Shared by both cameras.
+d405:
+  width: 640
+  height: 480
+  fx: 430.0
+  fy: 430.0
+  cx: 320.0
+  cy: 240.0
