@@ -22,7 +22,7 @@ def build_gui(app, side):
       }
     </style>
     """)
-    gui.add_markdown(f"## G1 Wrist Camera Viewer\nG1 29DOF + Inspire FTP · **{side}**\n\nOffline V0.1. Camera intrinsics and placements are visualization defaults. Missing D405 mesh uses a cuboid placeholder; missing mount uses frames only.")
+    gui.add_markdown(f"## G1 Wrist Camera Viewer\nG1 29DOF + Inspire FTP · **{side}**")
     with gui.add_folder("Display"):
         robot = gui.add_checkbox("Robot visual geometry", True)
         collision = gui.add_checkbox("Collision geometry", False)
@@ -40,7 +40,6 @@ def build_gui(app, side):
             handle.on_update(display)
     sliders = {}
     with gui.add_folder("Robot joints (radians; prismatic in metres)"):
-        gui.add_markdown("Slider limits come from Unitree's G1 29DOF Rev 1.0 URDF with Inspire FTP hands.")
         reset = gui.add_button("Reset Pose")
         limits = joint_limits(app.model)
         groups = {"Waist": [], "Left arm": [], "Right arm": [], "Left hand": [],
